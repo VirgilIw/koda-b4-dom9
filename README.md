@@ -17,4 +17,4 @@ Aplikasi ini menampilkan daftar suhu dalam Celcius, lalu bisa dikonversi ke **Fa
 - CSS
 - JavaScript (DOM)
 
-![ss konversi suhu](./assets/img/image.png)
+![ss konversi suhu](./assets/img/image1.png)
