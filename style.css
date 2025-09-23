@@ -5,7 +5,7 @@ h1 {
 .suhu-wrap1 {
   display: flex;
   justify-content: center;
-  gap: 90px;
+  gap: 12px;
   border: 1px solid black;
   text-align: center;
 }
@@ -15,7 +15,7 @@ h1 {
   justify-content: center;
   text-align: center;
   padding-top: 10px;
-  gap: 50px;
+  gap: 80px;
   border: 1px solid black;
   text-align: center;
 }
