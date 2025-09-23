@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM1</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>konversi suhu</h1>
+
+    <div class="wrap">
+      <div class="suhu-wrap1">
+        <p class="celci">Celcius</p>
+        <p class="fahrenheit">Fahrenheit</p>
+        <p class="reamur">Reamur</p>
+        <p class="kelvin">Kelvin</p>
+      </div>
+      <div class="suhu-wrap2">
+        <div id="celcius">
+          <div id="cel1">24</div>
+          <div id="cel2">40</div>
+          <div id="cel3">-10</div>
+        </div>
+        <div class="suhu-wrap3">
+          <div id="fahrenheit">
+            <div id="fah1"></div>
+            <div class="fah2"></div>
+            <div class="fah3"></div>
+          </div>
+        </div>
+        <div class="suhu-wrap4">
+          <div id="reamur">
+            <div class="ream-1"></div>
+            <div class="ream-2"></div>
+            <div class="ream-3"></div>
+          </div>
+        </div>
+        <div class="suhu-wrap5">
+          <div id="kelvin">
+            <div class="kelvin-1"></div>
+            <div class="kelvin-2"></div>
+            <div class="kelvin-3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="btn">
+      <button id="btn-fah">Konversi fahrenheit</button>
+      <button id="btn-ream">Konversi Reamur</button>
+      <button id="btn-kelv">Konversi Kelvin</button>
+      <button id="reset">Reset</button>
+    </div>
+    <script>
+      const celciusDivs = document.querySelectorAll("#celcius div");
+      const fahDivs = document.querySelectorAll("#fahrenheit div");
+      const reaDivs = document.querySelectorAll("#reamur div");
+      const kelvDivs = document.querySelectorAll("#kelvin div");
+      //
+      const btn1 = document.getElementById("btn-fah");
+      const btn2 = document.getElementById("btn-ream");
+      const btn3 = document.getElementById("btn-kelv");
+      const btn4 = document.getElementById("reset");
+
+      btn1.addEventListener("click", () => {
+        celciusDivs.forEach((celDiv, index) => {
+          let nilai = Number(celDiv.textContent);
+          let hasil = (9 / 5) * nilai + 32;
+          fahDivs[index].textContent = `${hasil}°F`;
+        });
+      });
+      //
+      btn2.addEventListener("click", () => {
+        let x = 0;
+        while (x < celciusDivs.length && reaDivs.length) {
+          let nilai = Number(celciusDivs[x].textContent);
+          let hasil = (4 / 5) * nilai;
+          reaDivs[x].textContent = `${hasil}°R`;
+          x++;
+        }
+      });
+
+      btn3.addEventListener("click", () => {
+        for (let i = 0; i < celciusDivs.length; i++) {
+          let nilai = Number(celciusDivs[i].textContent);
+          let hasil = (nilai + 273.14) * (9 / 5);
+          kelvDivs[i].textContent = `${hasil}°K`;
+        }
+      });
+
+      btn4.addEventListener("click", () => {
+        fahDivs.forEach((div) => (div.textContent = ""));
+        reaDivs.forEach((div) => (div.textContent = ""));
+        kelvDivs.forEach((div) => (div.textContent = ""));
+      });
+    </script>
+  </body>
+</html>

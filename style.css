@@ -1,0 +1,27 @@
+h1 {
+  display: flex;
+  justify-content: center;
+}
+.suhu-wrap1 {
+  display: flex;
+  justify-content: center;
+  gap: 90px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.suhu-wrap2 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-top: 10px;
+  gap: 50px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.btn {
+  display: flex;
+  margin-top: 10px;
+  justify-content: center;
+}
